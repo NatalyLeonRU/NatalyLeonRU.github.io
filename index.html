@@ -2,158 +2,183 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Rutgers Business School Portfolio</title>
+  <title>Rutgers Business School Portfolio – Accounting Major</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Professional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      color: #222;
+      font-family: 'Inter', sans-serif;
+      background: #f7f8fa;
+      color: #1f1f1f;
+    }
+
+    /* Professional color palette */
+    :root {
+      --rutgers-red: #cc0033;
+      --navy: #0a1a2f;
+      --light-gray: #e6e9ee;
+      --card-bg: #ffffff;
     }
 
     header {
-      background: #cc0033; /* Rutgers red */
+      background: var(--navy);
       color: #fff;
-      padding: 30px 10%;
+      padding: 40px 10%;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
+      font-weight: 700;
     }
 
     header h2 {
-      margin: 5px 0 0;
+      margin: 8px 0 0;
       font-size: 1.2rem;
-      font-weight: 400;
+      font-weight: 300;
+      opacity: 0.9;
     }
 
     nav {
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
     nav a {
-      color: #ffe6ec;
-      margin-right: 15px;
+      color: #dfe6f1;
+      margin-right: 18px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: var(--rutgers-red);
     }
 
     main {
-      padding: 30px 10%;
+      padding: 40px 10%;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
 
     h3 {
-      margin-bottom: 10px;
-      color: #cc0033;
-      border-bottom: 2px solid #cc0033;
+      margin-bottom: 12px;
+      color: var(--navy);
+      border-bottom: 3px solid var(--rutgers-red);
       display: inline-block;
-      padding-bottom: 3px;
+      padding-bottom: 4px;
+      font-size: 1.4rem;
+      font-weight: 600;
     }
 
     .about-content {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 25px;
       align-items: flex-start;
     }
 
     .about-text {
       flex: 2;
-      min-width: 250px;
+      min-width: 260px;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     .about-photo {
       flex: 1;
       min-width: 180px;
-      max-width: 220px;
+      max-width: 230px;
     }
 
     .about-photo img {
       width: 100%;
-      border-radius: 8px;
-      border: 3px solid #cc0033;
+      border-radius: 10px;
+      border: 4px solid var(--rutgers-red);
     }
 
     .info-list {
       list-style: none;
       padding: 0;
-      margin: 10px 0 0;
+      margin-top: 12px;
     }
 
     .info-list li {
-      margin-bottom: 5px;
-    }
-
-    .tag {
-      display: inline-block;
-      background: #cc0033;
-      color: #fff;
-      padding: 3px 8px;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      margin-right: 5px;
-      margin-bottom: 5px;
+      margin-bottom: 6px;
+      font-size: 0.95rem;
     }
 
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
 
     .card {
-      background: #fff;
-      border-radius: 8px;
-      padding: 15px 18px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
     }
 
     .card h4 {
       margin-top: 0;
-      margin-bottom: 8px;
-      color: #333;
+      margin-bottom: 10px;
+      color: var(--navy);
+      font-weight: 600;
     }
 
     .card p {
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       font-size: 0.95rem;
+      line-height: 1.5;
     }
 
     .card small {
-      color: #777;
-      font-size: 0.8rem;
+      color: #6b7280;
+      font-size: 0.85rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--rutgers-red);
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 14px;
+      font-size: 0.85rem;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      font-weight: 500;
     }
 
     .btn {
       display: inline-block;
-      padding: 8px 14px;
-      background: #cc0033;
+      padding: 10px 16px;
+      background: var(--navy);
       color: #fff;
-      border-radius: 4px;
+      border-radius: 6px;
       text-decoration: none;
       font-size: 0.9rem;
-      margin-top: 8px;
+      font-weight: 600;
+      margin-top: 10px;
     }
 
     .btn:hover {
-      background: #a30029;
+      background: var(--rutgers-red);
     }
 
     footer {
-      background: #222;
-      color: #ccc;
-      padding: 20px 10%;
-      font-size: 0.85rem;
+      background: var(--navy);
+      color: #dfe6f1;
+      padding: 25px 10%;
+      font-size: 0.9rem;
+      margin-top: 40px;
     }
 
     footer a {
@@ -164,21 +189,13 @@
     footer a:hover {
       text-decoration: underline;
     }
-
-    @media (max-width: 600px) {
-      header {
-        padding: 20px 6%;
-      }
-      main, footer {
-        padding: 20px 6%;
-      }
-    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Your Name</h1>
-    <h2>Rutgers Business School · B.S. in [Your Major]</h2>
+    <h2>Rutgers Business School · B.S. in Accounting · Class of 2028</h2>
     <nav>
       <a href="#about">About</a>
       <a href="#education">Education</a>
@@ -196,20 +213,19 @@
       <div class="about-content">
         <div class="about-text">
           <p>
-            I am a student at Rutgers Business School with a focus on
-            [Marketing / Finance / Supply Chain / Accounting / etc.]. I’m
-            passionate about data-driven decision making, strategic problem
-            solving, and creating value through business insights.
+            I am an Accounting major at Rutgers Business School, graduating in 2028.
+            I’m focused on financial reporting, auditing, and understanding how businesses
+            create value through accurate and ethical financial practices.
           </p>
           <ul class="info-list">
             <li><strong>Location:</strong> New Brunswick, NJ</li>
-            <li><strong>Graduation Year:</strong> 20XX</li>
-            <li><strong>Interests:</strong> Consulting, Analytics, Digital Marketing, Strategy</li>
+            <li><strong>Graduation Year:</strong> 2028</li>
+            <li><strong>Interests:</strong> Public Accounting, Audit, Tax, Financial Analysis</li>
           </ul>
         </div>
+
         <div class="about-photo">
-          <!-- Replace with your own photo -->
-          <img src="https://via.placeholder.com/220x260.png?text=Your+Photo" alt="Your Name" />
+          <img src="https://via.placeholder.com/230x280.png?text=Your+Photo" alt="Your Name" />
         </div>
       </div>
     </section>
@@ -218,11 +234,11 @@
     <section id="education">
       <h3>Education</h3>
       <div class="card">
-        <h4>Rutgers Business School, Rutgers University</h4>
-        <p><strong>Degree:</strong> B.S. in [Your Major]</p>
-        <p><strong>Expected Graduation:</strong> May 20XX</p>
-        <p><strong>Relevant Coursework:</strong> Financial Accounting, Business Analytics, Marketing Research, Corporate Finance, Supply Chain Management</p>
-        <p><strong>Honors & Activities:</strong> Dean’s List, [Business School Club], [Case Competition], [Student Organization]</p>
+        <h4>Rutgers Business School</h4>
+        <p><strong>Degree:</strong> B.S. in Accounting</p>
+        <p><strong>Expected Graduation:</strong> May 2028</p>
+        <p><strong>Relevant Coursework:</strong> Intermediate Accounting, Cost Accounting, Auditing, Taxation, Business Law, Financial Statement Analysis</p>
+        <p><strong>Activities:</strong> Accounting Society, Beta Alpha Psi, Case Competitions</p>
       </div>
     </section>
 
@@ -231,30 +247,30 @@
       <h3>Experience</h3>
       <div class="card-grid">
         <div class="card">
-          <h4>Business Analyst Intern · Company Name</h4>
-          <small>Summer 20XX · Location</small>
+          <h4>Accounting Intern · Company Name</h4>
+          <small>Summer 202X · Location</small>
           <p>
-            Supported cross-functional teams by analyzing market data, building dashboards,
-            and presenting insights to improve campaign performance and operational efficiency.
+            Assisted with financial reporting, account reconciliations, and audit preparation.
+            Supported senior accountants with monthly close tasks and variance analysis.
           </p>
           <p>
-            • Conducted data analysis using Excel/SQL<br />
-            • Created reports and visualizations for leadership<br />
-            • Collaborated with marketing and finance teams
+            • Prepared journal entries<br />
+            • Assisted with balance sheet reconciliations<br />
+            • Supported audit documentation
           </p>
         </div>
 
         <div class="card">
           <h4>Student Consultant · Rutgers Project/Club</h4>
-          <small>20XX–20XX · New Brunswick, NJ</small>
+          <small>202X–202X · New Brunswick, NJ</small>
           <p>
-            Worked with local businesses to develop marketing strategies, improve customer
-            experience, and optimize pricing and positioning.
+            Worked with local organizations to improve budgeting processes, streamline
+            financial tracking, and strengthen internal controls.
           </p>
           <p>
-            • Led client meetings and needs assessments<br />
-            • Delivered recommendations and presentations<br />
-            • Measured impact using KPIs and feedback
+            • Conducted financial assessments<br />
+            • Built simple forecasting models<br />
+            • Presented recommendations to clients
           </p>
         </div>
       </div>
@@ -265,33 +281,33 @@
       <h3>Projects</h3>
       <div class="card-grid">
         <div class="card">
-          <h4>Market Segmentation & IMC Campaign</h4>
-          <small>Rutgers Business School · Marketing Course</small>
+          <h4>Financial Statement Analysis Project</h4>
+          <small>Accounting Course</small>
           <p>
-            Developed an integrated marketing communications plan for a consumer brand,
-            including audience segmentation, positioning, media strategy, and KPI framework.
+            Analyzed a public company’s financial statements, evaluating liquidity,
+            profitability, leverage, and long-term performance trends.
           </p>
           <a class="btn" href="#" target="_blank">View Project</a>
         </div>
 
         <div class="card">
-          <h4>Financial Modeling & Valuation</h4>
-          <small>Finance Course</small>
+          <h4>Audit Simulation Case</h4>
+          <small>Auditing Course</small>
           <p>
-            Built a discounted cash flow model to evaluate a company’s intrinsic value,
-            analyzing revenue drivers, cost structure, and risk assumptions.
+            Completed an audit simulation involving risk assessment, sampling,
+            internal control evaluation, and preparation of audit workpapers.
           </p>
-          <a class="btn" href="#" target="_blank">View Model</a>
+          <a class="btn" href="#" target="_blank">View Case</a>
         </div>
 
         <div class="card">
-          <h4>Data Analytics Dashboard</h4>
-          <small>Business Analytics Course</small>
+          <h4>Tax Preparation Exercise</h4>
+          <small>Taxation Course</small>
           <p>
-            Created an interactive dashboard using Excel/Tableau to visualize sales trends,
-            customer segments, and profitability across regions.
+            Prepared mock individual and small-business tax returns, applying IRS rules
+            and identifying tax-saving opportunities.
           </p>
-          <a class="btn" href="#" target="_blank">View Dashboard</a>
+          <a class="btn" href="#" target="_blank">View Example</a>
         </div>
       </div>
     </section>
@@ -301,13 +317,13 @@
       <h3>Skills</h3>
       <p>
         <span class="tag">Excel</span>
-        <span class="tag">PowerPoint</span>
-        <span class="tag">Tableau</span>
-        <span class="tag">SQL (basic)</span>
-        <span class="tag">Financial Analysis</span>
-        <span class="tag">Marketing Strategy</span>
-        <span class="tag">Data Visualization</span>
-        <span class="tag">Team Leadership</span>
+        <span class="tag">Financial Reporting</span>
+        <span class="tag">GAAP</span>
+        <span class="tag">Audit Procedures</span>
+        <span class="tag">Tax Preparation</span>
+        <span class="tag">QuickBooks</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Team Collaboration</span>
         <span class="tag">Presentation Skills</span>
       </p>
     </section>
@@ -322,8 +338,8 @@
   </main>
 
   <footer>
-    <p>&copy; 20XX Your Name · Rutgers Business School</p>
-    <p>Built with HTML &amp; CSS · Last updated: Month 20XX</p>
+    <p>&copy; 2028 Your Name · Rutgers Business School</p>
+    <p>Built with HTML &amp; CSS</p>
   </footer>
 </body>
 </html>
