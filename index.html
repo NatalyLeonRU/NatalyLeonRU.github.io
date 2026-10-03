@@ -16,7 +16,6 @@
       color: #1f1f1f;
     }
 
-    /* Professional color palette */
     :root {
       --rutgers-red: #cc0033;
       --navy: #0a1a2f;
@@ -103,17 +102,6 @@
       border: 4px solid var(--rutgers-red);
     }
 
-    .info-list {
-      list-style: none;
-      padding: 0;
-      margin-top: 12px;
-    }
-
-    .info-list li {
-      margin-bottom: 6px;
-      font-size: 0.95rem;
-    }
-
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -134,17 +122,6 @@
       font-weight: 600;
     }
 
-    .card p {
-      margin: 0 0 10px;
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-
-    .card small {
-      color: #6b7280;
-      font-size: 0.85rem;
-    }
-
     .tag {
       display: inline-block;
       background: var(--rutgers-red);
@@ -157,37 +134,12 @@
       font-weight: 500;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 16px;
-      background: var(--navy);
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-top: 10px;
-    }
-
-    .btn:hover {
-      background: var(--rutgers-red);
-    }
-
     footer {
       background: var(--navy);
       color: #dfe6f1;
       padding: 25px 10%;
       font-size: 0.9rem;
       margin-top: 40px;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -197,117 +149,36 @@
     <h1>Your Name</h1>
     <h2>Rutgers Business School · B.S. in Accounting · Class of 2028</h2>
     <nav>
+      <a href="#statement">Statement</a>
       <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
+
+    <!-- Personal Statement -->
+    <section id="statement">
+      <h3>Personal Statement</h3>
+      <p style="font-size: 1.1rem; font-weight: 500; line-height: 1.6;">
+        I’m building my career in accounting by developing strong skills in financial reporting, auditing, and problem‑solving that support healthy business operations.
+      </p>
+    </section>
+
     <!-- About -->
     <section id="about">
       <h3>About Me</h3>
       <div class="about-content">
         <div class="about-text">
           <p>
-            I am an Accounting major at Rutgers Business School, graduating in 2028.
-            I’m focused on financial reporting, auditing, and understanding how businesses
-            create value through accurate and ethical financial practices.
+            I am an Accounting major at Rutgers Business School, graduating in 2028. I’m focused on financial reporting, auditing, and understanding how businesses create value through accurate and ethical financial practices.
           </p>
-          <ul class="info-list">
-            <li><strong>Location:</strong> New Brunswick, NJ</li>
-            <li><strong>Graduation Year:</strong> 2028</li>
-            <li><strong>Interests:</strong> Public Accounting, Audit, Tax, Financial Analysis</li>
-          </ul>
         </div>
 
         <div class="about-photo">
-          <img src="https://via.placeholder.com/230x280.png?text=Your+Photo" alt="Your Name" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education">
-      <h3>Education</h3>
-      <div class="card">
-        <h4>Rutgers Business School</h4>
-        <p><strong>Degree:</strong> B.S. in Accounting</p>
-        <p><strong>Expected Graduation:</strong> May 2028</p>
-        <p><strong>Relevant Coursework:</strong> Intermediate Accounting, Cost Accounting, Auditing, Taxation, Business Law, Financial Statement Analysis</p>
-        <p><strong>Activities:</strong> Accounting Society, Beta Alpha Psi, Case Competitions</p>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section id="experience">
-      <h3>Experience</h3>
-      <div class="card-grid">
-        <div class="card">
-          <h4>Accounting Intern · Company Name</h4>
-          <small>Summer 202X · Location</small>
-          <p>
-            Assisted with financial reporting, account reconciliations, and audit preparation.
-            Supported senior accountants with monthly close tasks and variance analysis.
-          </p>
-          <p>
-            • Prepared journal entries<br />
-            • Assisted with balance sheet reconciliations<br />
-            • Supported audit documentation
-          </p>
-        </div>
-
-        <div class="card">
-          <h4>Student Consultant · Rutgers Project/Club</h4>
-          <small>202X–202X · New Brunswick, NJ</small>
-          <p>
-            Worked with local organizations to improve budgeting processes, streamline
-            financial tracking, and strengthen internal controls.
-          </p>
-          <p>
-            • Conducted financial assessments<br />
-            • Built simple forecasting models<br />
-            • Presented recommendations to clients
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h3>Projects</h3>
-      <div class="card-grid">
-        <div class="card">
-          <h4>Financial Statement Analysis Project</h4>
-          <small>Accounting Course</small>
-          <p>
-            Analyzed a public company’s financial statements, evaluating liquidity,
-            profitability, leverage, and long-term performance trends.
-          </p>
-          <a class="btn" href="#" target="_blank">View Project</a>
-        </div>
-
-        <div class="card">
-          <h4>Audit Simulation Case</h4>
-          <small>Auditing Course</small>
-          <p>
-            Completed an audit simulation involving risk assessment, sampling,
-            internal control evaluation, and preparation of audit workpapers.
-          </p>
-          <a class="btn" href="#" target="_blank">View Case</a>
-        </div>
-
-        <div class="card">
-          <h4>Tax Preparation Exercise</h4>
-          <small>Taxation Course</small>
-          <p>
-            Prepared mock individual and small-business tax returns, applying IRS rules
-            and identifying tax-saving opportunities.
-          </p>
-          <a class="btn" href="#" target="_blank">View Example</a>
+          <img src="Headshot.jpeg" alt="Your Name" />
         </div>
       </div>
     </section>
@@ -316,29 +187,89 @@
     <section id="skills">
       <h3>Skills</h3>
       <p>
-        <span class="tag">Excel</span>
-        <span class="tag">Financial Reporting</span>
-        <span class="tag">GAAP</span>
-        <span class="tag">Audit Procedures</span>
-        <span class="tag">Tax Preparation</span>
-        <span class="tag">QuickBooks</span>
-        <span class="tag">Data Analysis</span>
+        <span class="tag">NJ Sales Tax Compliance</span>
+        <span class="tag">Payroll Processing</span>
+        <span class="tag">IRS & NJ Tax Payments</span>
+        <span class="tag">Excel (Intermediate–Advanced)</span>
+        <span class="tag">Recordkeeping</span>
+        <span class="tag">Client Communication</span>
+        <span class="tag">Front‑Office Operations</span>
         <span class="tag">Team Collaboration</span>
-        <span class="tag">Presentation Skills</span>
+        <span class="tag">Attention to Detail</span>
       </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h3>Projects</h3>
+      <div class="card-grid">
+
+        <!-- Workplace Project 1 -->
+        <div class="card">
+          <h4>Department Training & Resource Restructuring Initiative</h4>
+          <small>Professional Experience · Workplace Project</small>
+          <p>
+            Collaborated with my team to restructure our department by researching and identifying certifications, training programs, and professional resources that strengthened our knowledge base and improved workflow efficiency.
+          </p>
+          <p>
+            This initiative enhanced not only our department’s capabilities but also contributed to stronger operations across the entire organization.
+          </p>
+        </div>
+
+        <!-- Workplace Project 2 -->
+        <div class="card">
+          <h4>Workflow Optimization & Client Communication Enhancement</h4>
+          <small>Professional Experience · Workplace Project</small>
+          <p>
+            Identified inefficiencies in our front-office workflow and collaborated with my team to streamline client communication, improve scheduling processes, and strengthen daily administrative operations.
+          </p>
+          <p>
+            By reorganizing responsibilities, improving documentation, and enhancing communication practices, this project helped reduce delays, improve client satisfaction, and support smoother operations across the department.
+          </p>
+        </div>
+
+        <!-- Academic Project 1 -->
+        <div class="card">
+          <h4>Financial Statement Analysis Project</h4>
+          <small>Rutgers Business School · Accounting Course</small>
+          <p>
+            Analyzed a public company’s financial statements to evaluate liquidity, profitability, leverage, and long‑term performance trends.
+          </p>
+        </div>
+
+        <!-- Academic Project 2 -->
+        <div class="card">
+          <h4>Audit Simulation Case</h4>
+          <small>Auditing Course</small>
+          <p>
+            Completed an audit simulation involving risk assessment, sampling, internal control evaluation, and preparation of audit workpapers.
+          </p>
+        </div>
+
+        <!-- Academic Project 3 -->
+        <div class="card">
+          <h4>Tax Preparation Exercise</h4>
+          <small>Taxation Course</small>
+          <p>
+            Prepared mock individual and small‑business tax returns, applying IRS rules and identifying tax‑saving opportunities.
+          </p>
+        </div>
+
+      </div>
     </section>
 
     <!-- Contact -->
     <section id="contact">
       <h3>Contact</h3>
       <p><strong>Email:</strong> your.name@rutgers.edu</p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></p>
-      <p><strong>Resume:</strong> <a href="your-resume.pdf" target="_blank">Download PDF</a></p>
+      <p><strong>LinkedIn:</strong> linkedin.com/in/your-profile</p>
+      <p><strong>Resume:</strong> Download PDF</p>
     </section>
+
   </main>
 
   <footer>
-    <p>&copy; 2028 Your Name · Rutgers Business School</p>
+    <p>&copy; 2028 Nataly Leon · Rutgers Business School</p>
     <p>Built with HTML &amp; CSS</p>
   </footer>
 </body>
